@@ -1,0 +1,28 @@
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+for num in my_list:
+    if num % 2 == 0:
+        print(f"This number {num} is an even number")
+    else:
+        print(f"This number {num} is and odd number")
+
+list_sum = 0
+
+for num in my_list:
+    list_sum = list_sum + num
+print(f"sum of the numbers in list: \n{list_sum}")
+
+my_tup_list = [(1,2),(3,4),(5,6),(7,8),(9,10)]
+
+for (a,b) in my_tup_list:
+    print(f"1st item of my each tuple:{a}")
+    print(f"2nd item of my each tuple:{b}")
+
+
+my_dict = {'k1':1, 'k2':2, 'k3':3}
+
+for key,value in my_dict.items():
+    print(value)
+
+
+
+

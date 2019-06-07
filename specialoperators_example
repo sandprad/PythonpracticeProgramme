@@ -1,0 +1,87 @@
+#range operator
+#the below example print 0 to 9 not include 10
+print("print the number 0-9")
+for num in range(10):
+    print(num)
+
+#the below example print 3 to 9 not include 10, but includes 3
+print("print the number 3-9")
+for number in range(3,10):
+    print(number)
+
+#the below example print 2 to 10 with step size increment 3
+print("print the number 2-10 with step size 3")
+for numincr in range(2,11,3):
+    print(numincr)
+
+print("create a list of even numebr from 0 to 10")
+my_list = (list(range(0,12,2)))
+print(my_list)
+
+print("\n")
+print("the value of each index of a string")
+index_count = 0
+name = "Sandeep"
+for letter in name:
+    print(f'At index {index_count} the letter is {letter}')
+    index_count += 1
+
+
+#Enumerate operator
+#Enumarate operator returns a tuple specifying the index number and its value of the given string
+print("\n")
+print("this is example of enumerate operator")
+my_name = "Sandeep"
+for items in enumerate(my_name):
+    print(items)
+
+#Same example as above
+for index,letter in enumerate(my_name):
+    print(index,letter)
+
+#Zip function returns tuple
+print("example of zip function")
+mylist1 = [1, 2, 3, 4]
+mylist2 = ['a', 'b', 'c', 'd']
+my_list3 = ['apple', 'banana', 'mango', 'grapes']
+
+for items in zip(mylist1,mylist2,my_list3):
+    print(items)
+
+#in operators
+print("example of in operator")
+my_dict = {'k1':123, 'k2':456, 'k3':789}
+print(456 in my_dict.values())
+print(456 in my_dict.items())
+print(456 in my_dict.keys())
+print('k1' in my_dict.keys())
+print(('k1',123) in my_dict.items())
+
+#min and max function
+print("example of min and max finction")
+simplelist = [10,30,12,100,99,89,34]
+print(f"the minimum value available in the list {simplelist} is : {min(simplelist)}")
+print(f"the minimum value available in the list {simplelist} is : {max(simplelist)}")
+
+#Libraries
+#shuffle function will not return anything
+print("Example of shuffle function")
+from random import shuffle
+myordered_list = [1,2,3,4,5,6,7,8,9,10]
+print(f"befor shuffle {myordered_list}")
+shuffle(myordered_list)
+print(f"after shuffle {myordered_list}")
+
+#random function
+print("Example of returning a random number from a specified range")
+from random import randint
+my_random_number = randint(10,100)
+print(my_random_number)
+
+#Input function
+#input function always accepts things as a string
+print("Example of Input function")
+User_name = input("Enetr your name:")
+print(f"Username entered is: {User_name}")
+
+

@@ -1,0 +1,17 @@
+num = 0
+while num < 5:
+    print(f"value of num is {num}")
+    num += 1
+
+print("code for Continue statement")
+myname = "Sandeep"
+for letter in myname:
+    if letter == 'e':
+        continue
+    print(letter)
+
+print("code for Break statement")
+for letter in myname:
+    if letter == 'e':
+        break
+    print(letter)
