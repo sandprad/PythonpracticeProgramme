@@ -1,0 +1,64 @@
+# Inheritance is creating a new class using the classes that are already defined
+#Animal is my base class
+class Animal():
+    def __init__(self):
+        print("Animal Created")
+    def who_am_i(self):
+        print("I am an animal")
+    def eat(self):
+        print("I am eating")
+
+
+my_animal = Animal()
+my_animal.who_am_i()
+my_animal.eat()
+
+# Now while creating a class named Dog i observe that lots of methods
+# that are already defined in base class Animal can be used in my new class
+# So i will use inheritance concept
+
+class Dog(Animal):
+    def __init__(self):
+        Animal.__init__(self)
+        print("Dogs Created")
+    def who_am_i(self):        # manipulating a method in dog class. Overwrite the base class methods is also possible
+        print("I am a dog !")
+    def bark(self):             # add new methods for this new class
+        print("Woof!!!")
+
+my_dog = Dog()
+my_dog.eat()
+my_dog.who_am_i()
+my_dog.bark()
+
+
+#Example of polymorphisim
+print("Example of polymorphisim")
+class Dogy():
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return self.name + ' says Woof!!'
+
+class Caty():
+    def __init__(self,name):
+        self.name = name
+
+    def speak(self):
+        return self.name + ' says Meow!!'
+
+my_dogy = Dogy('Sam')
+my_caty = Caty('Lam')
+
+print(my_dogy.speak())
+print(my_caty.speak())
+
+
+def pet_speak(pet):
+    print(pet.speak())
+
+pet_speak(my_dogy)
+pet_speak(my_caty)
+
+

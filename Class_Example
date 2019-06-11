@@ -1,0 +1,35 @@
+class Sample():
+    pass
+my_sample = Sample()
+print(type(my_sample))
+
+class Dog():
+    def __init__(self,breed):
+        self.breed = breed
+
+my_dog = Dog(breed='lab')
+print(my_dog)
+print(my_dog.breed)
+
+
+class Dogy():
+    #Attributes
+    #We take in the arguments
+    #Assign it using self.attribute_name
+    def __init__(self,mybreed):
+        self.my_attribute = mybreed
+
+my_dogy = Dogy(mybreed='Husky')
+print(my_dogy.my_attribute)
+
+class Cat():
+    def __init__(self,breed,name,spots):
+        self.breed = breed
+        self.name = name
+        self.spots =spots
+
+#my_cat = Cat(breed='nasty',name='niami',spots=True)
+my_cat =Cat('nasty','niami', False)
+print(my_cat.breed)
+print(my_cat.name)
+print(my_cat.spots)

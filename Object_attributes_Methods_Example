@@ -1,0 +1,36 @@
+class Dog():
+    #Class object attributes
+    #same for any instances of a class
+    species = 'Mammal'
+    def __init__(self,breed,name,spots):
+        self.breed =breed
+        self.name = name
+        self.spots = spots
+
+    #Operation/Actions ---> Methods
+    def bark(self, number):
+        print(f'Woof !!! My Name is {self.name} and the number is {number}')
+
+my_dog = Dog('Hasky', 'Sam', True)
+print(my_dog.breed)
+print(my_dog.spots)
+print(my_dog.name)
+print(my_dog.species)
+print(my_dog.bark(10))
+
+class Circle():
+    #Class object Attributes
+    pi = 3.14
+    def __init__(self,radius = 1):
+        self.radius = radius
+        #self.area = radius * radius * self.pi   or
+        self.area = radius * radius * Circle.pi
+    #Method
+    def circumference(self):
+        return self.radius * self.pi * 2
+
+my_circle = Circle(30)
+print(my_circle.pi)
+print(my_circle.radius)
+print(f'circumference of circle is: {my_circle.circumference()}')
+print(f'Area of the circle is: {my_circle.area}')
