@@ -1,0 +1,29 @@
+def name_function():
+    print("Hello")
+    print("What is your name?:")
+    name = input()
+    print(f"Hello {name}")
+
+
+#name_function()
+
+#Pig_Latin word example:
+#if word starts with a vowel, add 'ay' at the end
+#if word doesn't start with vowel put 1st letter at the end of the word and then add 'ay'
+#Example: word --> ordway
+#         apple --> appleay
+
+
+def pig_latin(my_word):
+    if my_word[0] in 'aeiou':
+        return my_word+'ay'
+    else:
+        return my_word[1:]+my_word[0]+'ay'
+
+pig_word = pig_latin('word')
+print(pig_word)
+
+def myfunc(name):
+    print("hello " +name)
+
+myfunc("Sandeep")

@@ -24,3 +24,17 @@ print(my_even_num_list)
 celcius = [0,10,20,34.5]
 farenhite = [((9/5)*temp + 32) for temp in celcius]
 print(f"temperature in farenhite is : {farenhite}")
+
+#Nested loop example
+print("Example of nested loop")
+My_List_example = []
+for x in [2,4,6]:
+    for y in [10,100,1000]:
+        My_List_example.append(x*y)
+print(My_List_example)
+
+#above example with list comprehension
+
+print("Example of nested loop with list comprihension")
+My_List_example2 = [x*y for x in [2,4,6] for y in [10,100,1000]]
+print(My_List_example2)
