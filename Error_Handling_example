@@ -1,0 +1,41 @@
+def ask_for_int():
+    while True:
+        try:
+            number = int(input("Eneter an integer number: "))
+        except:
+            print("whoops its not an integer")
+        else:
+            print(f"thank you, the number is: {number}")
+            break
+        finally:
+            print("End of try")
+
+#ask_for_int()
+
+try:
+    for i in ['a','b','c']:
+        print(i**2)
+except TypeError:
+    print("Type error watch out!!!")
+
+
+try:
+
+    x = 5
+    y = 0
+    z = x/y
+except ZeroDivisionError:
+    print("Zero division error")
+finally:
+    print("all done")
+
+while True:
+    try:
+        number = int(input("Please provide an integer number:"))
+    except ValueError:
+        print("An error occured, you have not provided an interger")
+        continue
+    else:
+        print(f'the square of the number given is: {number**2}')
+        break
+
